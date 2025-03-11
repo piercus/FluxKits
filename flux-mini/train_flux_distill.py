@@ -64,7 +64,7 @@ def get_models(name: str, device, offload: bool, is_schnell: bool, args):
 
 def distill_loss(args, intermediate_double_s, intermediate_double_t, intermediate_single_s, intermediate_single_t):
 
-    intermediate_double_t_index = args.distill_slim_double
+    intermediate_double_t_index = args.distill_target_double
     intermediate_double_t = [x for i, x in enumerate(intermediate_double_t) if i in intermediate_double_t_index]
         
     intermediate_single_t_index = args.distill_target_single
